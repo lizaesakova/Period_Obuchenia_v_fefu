@@ -1,0 +1,13 @@
+[project]
+name = "telegram-voice-transcriber"
+version = "0.2.0"
+description = "Транскрибация голосовых сообщений из Telegram (.ogg / Opus)"
+requires-python = ">=3.10"
+
+dependencies = [
+    "faster-whisper>=1.0.0",
+    "pydub>=0.25.1",
+    "noisereduce>=3.0.2",
+    "soundfile>=0.12.1",
+    "numpy>=1.24.0",
+]
