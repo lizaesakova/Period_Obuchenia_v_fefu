@@ -197,17 +197,17 @@ def main() -> None:
             denoise=denoise,
         )
     except (FileNotFoundError, ValueError) as e:
-        # Ожидаемые ошибки пользователю — коротко и понятно, без стектрейса
-        print(f"❌ {e}")
+        # Ожидаемые ошибки пользователю
+        print(f" {e}")
         sys.exit(1)
     except Exception as e:
-        # Всё остальное — подробно в лог, пользователю — коротко
+        # Всё остальное
         logger.exception("Транскрибация завершилась с ошибкой")
-        print(f"❌ Ошибка транскрибации: {e}")
+        print(f" Ошибка транскрибации: {e}")
         sys.exit(1)
 
     print("=" * 50)
-    print("📄 РЕЗУЛЬТАТ ТРАНСКРИБАЦИИ:")
+    print(" РЕЗУЛЬТАТ ТРАНСКРИБАЦИИ:")
     print("=" * 50)
     print(text if text else "(речь не обнаружена)")
     print("=" * 50)
